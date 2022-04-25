@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style.module.scss'
 import logo from './../../asset/image/home/Logo.png'
-// import { Link } from 'react-router-dom'
+import CartModal from '../../popup/cart/CartModal'
+import FollowModal from '../../popup/follow/FollowModal'
+
 const listMenus = [
   {
     id: 1,
@@ -32,6 +34,10 @@ const listMenus = [
 ]
 
 const HeaderPage = () => {
+  const [color, setActive] = useState(1);
+  const handleActiveColor = (index: number) => {
+    setActive(index)
+  }
   return (
     <div className={`${styles.HomePage} d-flex justify-content-between`}>
       <div className={styles.logo}>
@@ -41,17 +47,17 @@ const HeaderPage = () => {
         <ul>
           {listMenus.length > 0 && listMenus.map((item, index) => {
             return (
-              <li key={index}>
-                <a href={item.to}>{item.page}</a>
+              <li key={index} onChange={() => handleActiveColor(index)}>
+                <a href={item.to} className={index === color ? 'active' : ''}>{item.page}</a>
               </li>
             )
           })}
         </ul>
       </div>
-      <div className={styles.cart}>
-        <i className='fa fa-shopping-cart'></i>
+      <div className={`${styles.cart} d-flex`}>
+        <CartModal />
         <i className='fa fa-search'></i>
-        <i className='fa fa-bars'></i>
+        <FollowModal />
       </div>
     </div>
   )

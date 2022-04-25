@@ -1,0 +1,14 @@
+.followBtn {
+  :global {
+    .ant-btn {
+      height: 140px !important;
+      border: none !important;
+
+      &:hover,
+      &:active {
+        color: #000 !important;
+        border-color: #fff !important;
+      }
+    }
+  }
+}

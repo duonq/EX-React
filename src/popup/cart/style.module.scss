@@ -1,0 +1,28 @@
+.cartBtn {
+  :global {
+    .ant-btn {
+      height: 140px !important;
+      border: none !important;
+
+      &:hover,
+      &:active {
+        color: #000 !important;
+        border-color: #fff !important;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-modal {
+    float: right !important;
+    margin-right: 150px !important;
+
+    &-body {
+      ul {
+        list-style-type: none !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
