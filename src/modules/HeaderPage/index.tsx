@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styles from './style.module.scss'
-import logo from './../../asset/image/home/Logo.png'
 import CartModal from '../../popup/cart/CartModal'
 import FollowModal from '../../popup/follow/FollowModal'
+import LogoImg from '../../components/logoImg'
 
 const listMenus = [
   {
@@ -41,7 +41,7 @@ const HeaderPage = () => {
   return (
     <div className={`${styles.HomePage} d-flex justify-content-between`}>
       <div className={styles.logo}>
-        <img src={logo} alt="logo" />
+        <LogoImg />
       </div>
       <div className={styles.menu}>
         <ul>
@@ -56,7 +56,7 @@ const HeaderPage = () => {
       </div>
       <div className={`${styles.cart} d-flex`}>
         <CartModal />
-        <i className='fa fa-search'></i>
+        <i className='fa fa-search m-auto'></i>
         <FollowModal />
       </div>
     </div>

@@ -12,3 +12,25 @@
     }
   }
 }
+
+:global {
+  .followStyle {
+    margin-right: 0 !important;
+    top: 0 !important;
+
+    .socialFollow {
+      a {
+        padding: 20px;
+
+        i {
+          font-size: 20px;
+          color: gray;
+
+          &:hover {
+            color: burlywood;
+          }
+        }
+      }
+    }
+  }
+}

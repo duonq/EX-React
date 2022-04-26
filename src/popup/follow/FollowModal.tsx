@@ -7,6 +7,7 @@ import follow3 from './../../asset/image/home/follow3.jpg'
 import follow4 from './../../asset/image/home/follow4.jpg'
 import follow5 from './../../asset/image/home/follow5.jpg'
 import FollowModalItem from '../../components/followModalItem';
+import { Link } from 'react-router-dom';
 const listImg = [
   {
     id: 1,
@@ -33,6 +34,28 @@ const listImg = [
     title: follow3
   }
 ]
+const listSocial = [
+  {
+    id: 1,
+    to: '',
+    icon: 'fa fa-twitter'
+  },
+  {
+    id: 2,
+    to: '',
+    icon: 'fa fa-linkedin'
+  },
+  {
+    id: 3,
+    to: '',
+    icon: 'fa fa-instagram'
+  },
+  {
+    id: 4,
+    to: '',
+    icon: 'fa fa-facebook-square'
+  }
+]
 
 const FollowModal = () => {
   const [visible, setVisible] = useState(false);
@@ -50,6 +73,7 @@ const FollowModal = () => {
         onCancel={() => setVisible(false)}
         width={500}
         footer={false}
+        className='followStyle'
       >
         <FollowModalItem title='follow instagram' contact='@Ura.cosmetic_beauty'>
           <Row>
@@ -64,27 +88,30 @@ const FollowModal = () => {
         </FollowModalItem>
         <FollowModalItem title='newsletter' contact='Subcribe to our newsletter'>
           <Form
-            name="basic"
-            initialValues={{ remember: true }}
             onFinish={onFinish}
-            autoComplete="off"
+            className='d-flex'
           >
             <Form.Item
-              wrapperCol={{span: 16 }}
-              name="email"
+              name='email'
               rules={[{ required: true, message: 'Please input your email!' }]}
+              className='w-100'
             >
               <Input />
-              <Button htmlType="submit">
-                Submit
-              </Button>
             </Form.Item>
-            {/* <Form.Item>
-              <Button htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item> */}
+            <Button>
+              <i className='fa fa-chevron-right'></i>
+            </Button>
           </Form>
+
+          <div className='socialFollow'>
+            {listSocial.length > 0 && listSocial.map((item, index) => {
+              return (
+                <Link to={item.to} key={index}>
+                  <i className={item.icon}></i>
+                </Link>
+              )
+            })}
+          </div>
         </FollowModalItem>
       </Modal>
     </div>

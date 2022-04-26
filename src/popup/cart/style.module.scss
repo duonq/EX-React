@@ -14,9 +14,12 @@
 }
 
 :global {
-  .ant-modal {
+  .cartStyle {
     float: right !important;
     margin-right: 150px !important;
+  }
+
+  .ant-modal {
 
     &-body {
       ul {

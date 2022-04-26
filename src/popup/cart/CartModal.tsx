@@ -34,30 +34,33 @@ const CartModal = () => {
       <Button onClick={() => setVisible(true)}>
         <i className='fa fa-shopping-cart'></i>
       </Button>
-      <Modal
-        title="Cart"
-        visible={visible}
-        onOk={() => setVisible(false)}
-        onCancel={() => setVisible(false)}
-        width={250}
-        footer={false}
-      >
-        <ul>
-          {listproduct.length > 0 && listproduct.map((item, idx) => {
-            return (
-              <li key={idx} className='d-flex p-2'>
-                <img src={item.img} alt="" className='w-50' />
-                <span className='d-grid p-2'>
-                  <span>{item.name}</span>
-                  <span>${item.price}</span>
-                  <span>Qty:{item.quanlity}</span>
-                </span>
-              </li>
-            )
-          })
-          }
-        </ul>
-      </Modal>
+      <div className=''>
+        <Modal
+          title="Cart"
+          visible={visible}
+          onOk={() => setVisible(false)}
+          onCancel={() => setVisible(false)}
+          width={250}
+          footer={false}
+          className='cartStyle'
+        >
+          <ul>
+            {listproduct.length > 0 && listproduct.map((item, idx) => {
+              return (
+                <li key={idx} className='d-flex p-2'>
+                  <img src={item.img} alt="" className='w-50' />
+                  <span className='d-grid p-2'>
+                    <span>{item.name}</span>
+                    <span>${item.price}</span>
+                    <span>Qty:{item.quanlity}</span>
+                  </span>
+                </li>
+              )
+            })
+            }
+          </ul>
+        </Modal>
+      </div>
     </div>
   )
 }
