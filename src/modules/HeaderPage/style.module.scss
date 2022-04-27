@@ -15,11 +15,18 @@
       }
     }
   }
-  .active{
+
+  .logo {
+    margin: auto 0;
+    text-align: center;
+  }
+
+  .active {
     background: red;
   }
-  .cart{
-    i{
+
+  .cart {
+    i {
       padding: 50px 25px;
     }
   }

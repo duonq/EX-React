@@ -1,0 +1,26 @@
+.footerPage {
+  width: 80%;
+  margin: auto;
+
+  .secfooterItem {
+    padding: 20px 30px;
+
+    a {
+      i {
+        padding: 20px;
+        color: gray;
+        &:hover{
+          color: burlywood;
+        }
+      }
+      font-size: 20px;
+    }
+  }
+
+  :global {
+    h3 {
+      padding: 20px 30px 0;
+      margin-bottom: 0 !important;
+    }
+  }
+}

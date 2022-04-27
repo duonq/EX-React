@@ -8,7 +8,7 @@ const listMenus = [
   {
     id: 1,
     page: 'Home',
-    to: '/',
+    to: '/home',
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const HeaderPage = () => {
   return (
     <div className={`${styles.HomePage} d-flex justify-content-between`}>
       <div className={styles.logo}>
-        <LogoImg />
+        <LogoImg width='75%' />
       </div>
       <div className={styles.menu}>
         <ul>

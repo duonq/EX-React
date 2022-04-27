@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "antd/dist/antd.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './modules/Layouts/HomePage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />}></Route>
+        <Route path='/' element={<App />}>
+          <Route path='home' element={<HomePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
