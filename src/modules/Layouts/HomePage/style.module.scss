@@ -1,20 +1,90 @@
-.homePage{
-  h2{
-    font-size: 50px;
+.homePage {
+  h2 {
+    font-size: 45px;
     color: #212529;
+    text-align: center;
   }
-  h3{
+
+  h3 {
     font-size: 25px;
     color: #212529;
   }
-  h5{
+
+  h4 {
     font-size: 25px;
     color: #999;
     margin-bottom: 60px;
   }
-  p{
+
+  p {
     font-size: 15px;
     color: #989898;
     margin-bottom: 50px;
+  }
+
+  :global {
+    .ant-row {
+      .ant-col {
+        padding: 20px;
+
+        .ant-card {
+          margin: auto;
+
+          &-body {
+            text-align: center;
+            font-family: monospace;
+
+            p {
+              margin-bottom: 0 !important;
+            }
+
+            h3 {
+              color: coral;
+              font-weight: bold;
+
+              span {
+                color: gray;
+                text-decoration: line-through;
+                padding-right: 10px;
+              }
+            }
+
+            h5 {
+              color: #333;
+              font-size: 22px;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .secProduct {
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .review {
+    width: 70% !important;
+    margin: 60px auto;
+    padding: 60px;
+
+    h4 {
+      font-size: 18px !important;
+      margin: 20px;
+    }
+  }
+
+  .sliderFooter {
+    width: 75%;
+    margin: auto;
+
+    span {
+      font-size: 40px;
+      color: #212529;
+      float: right;
+    }
   }
 }

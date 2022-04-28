@@ -15,7 +15,20 @@ import makeup5 from './../../../asset/image/product/product5.jpg'
 import makeup6 from './../../../asset/image/product/product6.jpg'
 import makeup7 from './../../../asset/image/product/product7.jpg'
 import makeup8 from './../../../asset/image/product/product8.jpg'
-// import makeup9 from './../../../asset/image/product/product9.jpg'
+import makeup9 from './../../../asset/image/product/product9.jpg'
+import avtaFb1 from './../../../asset/image/home/patricsia1.jpg'
+import avtaFb2 from './../../../asset/image/home/patricsia2.jpg'
+import avtaFb3 from './../../../asset/image/home/patricsia3.jpg'
+import bground from './../../../asset/image/home/bg-review.jpg'
+import product from './../../../asset/image/product-lastest/lastest1.jpg'
+import product1 from './../../../asset/image/product-lastest/lastest2.jpg'
+import product2 from './../../../asset/image/product-lastest/lastest3.jpg'
+import product3 from './../../../asset/image/product-lastest/lastest4.jpg'
+import product4 from './../../../asset/image/product-lastest/lastest5.jpg'
+import product5 from './../../../asset/image/product-lastest/lastest6.jpg'
+import banner1 from './../../../asset/image/home/banner-1.jpg'
+
+import RattingStar from '../../../components/rating'
 
 const listProduct = [
   {
@@ -29,6 +42,7 @@ const listProduct = [
     id: 2,
     titleProduct: 'Night cream',
     price: 39,
+    sale_price: 49,
     type: 'Spa',
     image: makeup2
   },
@@ -64,7 +78,8 @@ const listProduct = [
     id: 7,
     titleProduct: 'Moisturizing cream',
     price: 41,
-    type: 'Beauty',
+    sale_price: 52,
+    type: 'Spa',
     image: makeup7
   },
   {
@@ -74,13 +89,75 @@ const listProduct = [
     type: 'Make up',
     image: makeup8
   },
-  // {
-  //   id: 9,
-  //   titleProduct: 'Water flower',
-  //   price: 62,
-  //   type: 'Spa',
-  //   image: makeup9
-  // }
+  {
+    id: 9,
+    titleProduct: 'Water flower',
+    price: 62,
+    sale_price: 69,
+    type: 'Spa',
+    image: makeup9
+  }
+]
+const listView = [
+  {
+    id: 1,
+    image: avtaFb1,
+    name: 'Patricsia Petersen',
+    icon: 'fa fa-star',
+    messFB: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text.'
+  },
+  {
+    id: 2,
+    image: avtaFb2,
+    name: 'Patricsia Petersen',
+    icon: 'fa fa-star',
+    messFB: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text.'
+  },
+  {
+    id: 3,
+    image: avtaFb3,
+    name: 'Patricsia Petersen',
+    icon: 'fa fa-star',
+    messFB: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text.'
+  }
+]
+const listProductNew = [
+  {
+    id: 1,
+    title: 'But I must explain to you how all this',
+    time: 'By Sugar / May 18.2019',
+    image: product1
+  },
+  {
+    id: 2,
+    title: 'Neque porr quisquam dolorem',
+    time: 'By Sugar / May 18.2019',
+    image: product2
+  },
+  {
+    id: 3,
+    title: 'Itaque earum rerum hic tenetur',
+    time: 'By Sugar / May 18.2019',
+    image: product3
+  },
+  {
+    id: 4,
+    title: 'In a free hour,when our power',
+    time: 'By Sugar / May 18.2019',
+    image: product4
+  },
+  {
+    id: 5,
+    title: 'On the other hand,we denounce',
+    time: 'By Sugar / May 18.2019',
+    image: product5
+  },
+  {
+    id: 6,
+    title: 'Ut enim ad minima veniam quis nostrum',
+    time: 'By Sugar / May 18.2019',
+    image: product
+  }
 ]
 const HomePage = () => {
   return (
@@ -92,7 +169,7 @@ const HomePage = () => {
         </Col>
         <Col span={8}>
           <h2>#Genuine Cosmetics</h2>
-          <h5>Customers Satisfaction</h5>
+          <h4>Customers Satisfaction</h4>
           <FollowModalItem title='Organic cream'>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Iste quam consequuntur numquam velit possimus?
@@ -114,31 +191,73 @@ const HomePage = () => {
         </Col>
       </Row>
       <SliderPageItem backgroundImage={bgImg}>
-        <h2>fhgfhtrhrtj</h2>
+        <h2>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Culpa blanditiis eveniet aspernatur natus eaque magni quam
+          debitis impedit animi voluptatum expedita ad dolorem sunt,
+          iste, quos molestiae, nulla architecto praesentium.
+        </h2>
       </SliderPageItem>
-      <FollowModalItem title='Product Our'>
-        <div className='w-75 mx-auto'>
-          <Carousel>
-            {listProduct.length > 0 && listProduct.map((item, index) => {
-              return (
-                <div key={index}>
-                  <Card
-                    hoverable
-                    style={{ width: 250 }}
-                    key={index}
-                    cover={
-                      <img alt="example" src={item.image} />
-                    }
-                  >
-                    <h2>page</h2>
-                  </Card>
+      <h2 className='m-5'>Product Our</h2>
+      <Row className='w-75 mx-auto'>
+        {listProduct.length > 0 && listProduct.map((item, index) => {
+          return (
+            <Col span={6} key={index}>
+              <Card
+                hoverable
+                style={{ width: 300 }}
+                key={index}
+                cover={
+                  <img alt="example" src={item.image} />
+                }
+              >
+                <p>{item.type}</p>
+                <h5>{item.titleProduct}</h5>
+                <h3>
+                  <span>{item.sale_price ? "$" + item.sale_price : ''}</span>
+                  ${item.price}
+                </h3>
+              </Card>
+            </Col>
+          )
+        })}
+      </Row>
+      <CarouselItem backgroundImage={bground}>
+        {listView.length > 0 && listView.map((item, index) => {
+          return (
+            <div key={index} className={`${style.review} text-center`}>
+              <img src={item.image} alt={item.name} style={{ width: '15%', height: '182px', margin: 'auto', borderRadius: '50%' }} />
+              <h3>{item.name}</h3>
+              <RattingStar />
+              <h4>{item.messFB}</h4>
+            </div>
+          )
+        })}
+      </CarouselItem>
+      <h2 className='my-5'>Latest News</h2>
+      <Row className='w-75 m-auto'>
+        {listProductNew.length > 0 && listProductNew.map((item, index) => {
+          return (
+            <Col span={8} key={index}>
+              <div className='d-flex'>
+                <img src={item.image} alt="" width={150} style={{ height: '100px' }} />
+                <div className='px-3'>
+                  <h5>{item.title}</h5>
+                  <p>{item.time}</p>
                 </div>
-              )
-            })}
-          </Carousel>
-
-        </div>
-      </FollowModalItem>
+              </div>
+            </Col>
+          )
+        })}
+      </Row>
+      <div className={`${style.sliderFooter} p-5`}>
+        <SliderPageItem backgroundImage={banner1}>
+          <div>
+            <span>ONE DAY</span>
+            <span>10 % DISCOUNT</span>
+          </div>
+        </SliderPageItem>
+      </div>
     </div>
   )
 }
