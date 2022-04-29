@@ -1,4 +1,4 @@
-import { Card, Carousel, Col, Row } from 'antd'
+import { Button, Card, Carousel, Col, Row } from 'antd'
 import React from 'react'
 import FollowModalItem from '../../../components/followModalItem'
 import SliderPageItem from '../../../components/sliderItem'
@@ -191,12 +191,10 @@ const HomePage = () => {
         </Col>
       </Row>
       <SliderPageItem backgroundImage={bgImg}>
-        <h2>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Culpa blanditiis eveniet aspernatur natus eaque magni quam
-          debitis impedit animi voluptatum expedita ad dolorem sunt,
-          iste, quos molestiae, nulla architecto praesentium.
-        </h2>
+        <h2 style={{ paddingTop: '100px' }}>Deal Of The Day</h2>
+        <Button type="dashed" size='large' style={{ height: '48px', width: '200px' }}>
+          Shop now
+        </Button>
       </SliderPageItem>
       <h2 className='m-5'>Product Our</h2>
       <Row className='w-75 mx-auto'>
@@ -205,7 +203,7 @@ const HomePage = () => {
             <Col span={6} key={index}>
               <Card
                 hoverable
-                style={{ width: 300 }}
+                // style={{ width: 300 }}
                 key={index}
                 cover={
                   <img alt="example" src={item.image} />
@@ -252,9 +250,14 @@ const HomePage = () => {
       </Row>
       <div className={`${style.sliderFooter} p-5`}>
         <SliderPageItem backgroundImage={banner1}>
-          <div>
-            <span>ONE DAY</span>
-            <span>10 % DISCOUNT</span>
+          <div className={style.discountFt}>
+            <div>
+              <p>ONE DAY</p>
+              <p>10 % DISCOUNT</p>
+            </div>
+            <Button type='primary' ghost size='large' style={{ height: '48px', width: '200px' }}>
+              {new Date().getDate() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getFullYear()}
+            </Button>
           </div>
         </SliderPageItem>
       </div>

@@ -81,10 +81,141 @@
     width: 75%;
     margin: auto;
 
-    span {
+    p {
       font-size: 40px;
       color: #212529;
+      display: flow-root;
+      font-family: cursive;
+      margin-right: 50px;
+    }
+
+    .discountFt {
+      margin-top: 200px;
       float: right;
+    }
+  }
+}
+
+@media only screen and (min-width: 841px) and (max-width: 1024px) {
+  .homePage {
+    img {
+      width: 100%;
+    }
+
+    :global {
+      .ant-row {
+        .ant-col {
+          &-12 {
+            img {
+              width: 100%;
+            }
+          }
+
+          &-8 {
+            max-width: 50%;
+            flex: 0 0 50%;
+
+            h2 {
+              text-align: start !important;
+              font-size: 20px;
+            }
+
+            h3 {
+              font-size: 18px;
+            }
+
+            h4 {
+              font-size: 14px;
+              margin-bottom: 30px !important;
+            }
+
+            p {
+              font-size: 12px;
+              margin-bottom: 10px !important;
+            }
+          }
+
+          &-6 {
+            max-width: 50%;
+          }
+        }
+      }
+
+      .review {
+        width: 100% !important;
+      }
+
+      .sliderFooter {
+        width: 100% !important;
+        margin: auto;
+      }
+    }
+
+    .review {
+      width: 100% !important;
+    }
+
+    .sliderFooter {
+      width: 100% !important;
+
+      .discountFt {
+        float: inherit;
+        margin-top: 0 !important;
+        padding-top: 70px;
+
+        div {
+          display: flex;
+          justify-content: center;
+
+          p {
+            margin-right: 10px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .homePage {
+    img {
+      width: 100%;
+    }
+
+    :global {
+      .w-75 {
+        width: 90% !important;
+      }
+
+      .ant-row {
+        .ant-col {
+          &-6 {
+            max-width: 33% !important;
+            margin: auto;
+            flex: none;
+
+            .ant-card-body {
+              p {
+                font-size: 14px;
+              }
+
+              h5 {
+                font-size: 16px;
+              }
+
+              h3 {
+                font-size: 20px;
+              }
+            }
+          }
+
+          &-8 {
+            max-width: 50% !important;
+            flex: 0 0 50% !important;
+          }
+        }
+      }
     }
   }
 }
