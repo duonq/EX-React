@@ -164,10 +164,10 @@ const HomePage = () => {
     <div className={style.homePage}>
       <BannerPage />
       <Row className='w-75 mx-auto my-5'>
-        <Col span={12}>
+        <Col lg={{ span: 12 }} md={{ span: 12 }} xs={{ span: 24 }}>
           <img src={cosmeticBeauty} alt="cosmetic-Beauty" />
         </Col>
-        <Col span={8}>
+        <Col xl={{ span: 8 }} lg={{ span: 12 }} md={{ span: 12 }} xs={{ span: 24 }}>
           <h2>#Genuine Cosmetics</h2>
           <h4>Customers Satisfaction</h4>
           <FollowModalItem title='Organic cream'>
@@ -200,7 +200,7 @@ const HomePage = () => {
       <Row className='w-75 mx-auto'>
         {listProduct.length > 0 && listProduct.map((item, index) => {
           return (
-            <Col span={6} key={index}>
+            <Col xl={{ span: 6 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }} key={index}>
               <Card
                 hoverable
                 // style={{ width: 300 }}
@@ -236,9 +236,9 @@ const HomePage = () => {
       <Row className='w-75 m-auto'>
         {listProductNew.length > 0 && listProductNew.map((item, index) => {
           return (
-            <Col span={8} key={index}>
+            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }} key={index}>
               <div className='d-flex'>
-                <img src={item.image} alt="" width={150} style={{ height: '100px' }} />
+                <img src={item.image} alt="" width={150} height={100} />
                 <div className='px-3'>
                   <h5>{item.title}</h5>
                   <p>{item.time}</p>
